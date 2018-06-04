@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+route::get('cek',function(){
+    return view('layouts.admin');
+});
+Route::resource('eskuls','EskulController'); 
+    
+

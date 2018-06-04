@@ -14,7 +14,8 @@ class EskulController extends Controller
      */
     public function index()
     {
-        //
+        $a=eskul::all();
+        return view('eskul.index',compact('a'));
     }
 
     /**
@@ -24,7 +25,7 @@ class EskulController extends Controller
      */
     public function create()
     {
-        //
+        return view('eskul.create');
     }
 
     /**
@@ -35,7 +36,9 @@ class EskulController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $kategori = Eskul::create($request->all());
+        alert()->success('Kategori Tersimpan')->autoclose(3500);
+        return redirect()->route('ekskul.index');
     }
 
     /**

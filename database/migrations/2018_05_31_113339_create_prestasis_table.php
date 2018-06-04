@@ -18,6 +18,9 @@ class CreatePrestasisTable extends Migration
             $table->string('nama');
             $table->string('dalam_bidang');
             $table->string('ket');
+            $table->string('id_jurusan');
+            $table->string('id_eskul');
+            
             $table->timestamps();
         });
     }
