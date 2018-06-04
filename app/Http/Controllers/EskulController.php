@@ -36,9 +36,7 @@ class EskulController extends Controller
      */
     public function store(Request $request)
     {
-        $kategori = Eskul::create($request->all());
-        alert()->success('Kategori Tersimpan')->autoclose(3500);
-        return redirect()->route('ekskul.index');
+
     }
 
     /**
